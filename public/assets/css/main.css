@@ -12,7 +12,8 @@
 --------------------------------------------------------------*/
 /* Fonts */
 :root {
-  --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  /* --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; */
+  --default-font: 'Arial', sans-serif;
   --heading-font: "Raleway",  sans-serif;
   --nav-font: "Inter",  sans-serif;
 }
@@ -290,8 +291,28 @@ h6 {
 /* Global Header on Scroll
 ------------------------------*/
 .scrolled .header {
-  --background-color: rgba(21, 34, 43, 0.85);
+  --background-color: rgba(255, 255, 255, 0.8);
 }
+
+.scrolled .header .logo h1 {
+  /* color: #273d4e; */
+  color: #ff4a17;
+}
+
+.scrolled .header .cta-btn,
+.header .cta-btn:focus {
+  color: #273d4e;
+  border: 2px solid #273d4e;
+}
+
+.scrolled .header .cta-btn:hover,
+.header .cta-btn:focus:hover {
+  color: var(--contrast-color);
+  background: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+
 
 /*--------------------------------------------------------------
 # Navigation Menu
@@ -337,6 +358,11 @@ h6 {
     transition: 0.3s;
     position: relative;
     text-transform: uppercase;
+  }
+
+  .scrolled .navmenu a,
+  .scrolled .navmenu a:focus {
+    color: #273d4e;
   }
 
   .navmenu a i,
@@ -438,6 +464,12 @@ h6 {
     margin-right: 10px;
     cursor: pointer;
     transition: color 0.3s;
+  }
+
+  .scrolled .mobile-nav-toggle {
+    color: #ff4a17;
+    /* color: #273d4e; */
+
   }
 
   .navmenu {
@@ -932,7 +964,7 @@ section,
 
 .hero:before {
   content: "";
-  background: color-mix(in srgb, var(--background-color), transparent 30%);
+  background: color-mix(in srgb, var(--background-color), transparent 70%);
   position: absolute;
   inset: 0;
   z-index: 2;
@@ -957,7 +989,7 @@ section,
 }
 
 .hero .btn-get-started {
-  background: var(--accent-color);
+  /* background: var(--accent-color); */
   color: var(--contrast-color);
   font-weight: 400;
   font-size: 14px;
@@ -967,10 +999,12 @@ section,
   border-radius: 4px;
   transition: 0.3s;
   text-transform: uppercase;
+  border: 2px solid var(--contrast-color);
 }
 
 .hero .btn-get-started:hover {
   background: color-mix(in srgb, var(--accent-color), transparent 20%);
+  border: color-mix(in srgb, var(--contrast-color), transparent 20%);
 }
 
 .hero .btn-watch-video {
@@ -1156,6 +1190,11 @@ section,
 --------------------------------------------------------------*/
 .clients {
   padding: 20px 0;
+  padding-bottom: 50px;
+}
+
+.clients .section-title {
+  padding-bottom: 0px;
 }
 
 .clients .client-logo {
@@ -1237,6 +1276,9 @@ section,
     line-height: 1;
     font-size: 36px;
   }
+  .features .nav-link h4 {
+    font-size: 16px; /* 작은 화면에서는 폰트를 좀 더 작게 설정 */
+  }
 }
 
 @media (max-width: 575px) {
@@ -1246,6 +1288,9 @@ section,
 
   .features .nav-link i {
     font-size: 24px;
+  }
+  .features .nav-link h4 {
+    font-size: 14px; /* 작은 화면에서는 폰트를 좀 더 작게 설정 */
   }
 }
 
@@ -1577,6 +1622,10 @@ section,
   transition: 0.5s;
 }
 
+.team .member .member-info .member-detail-btn {
+  cursor: pointer;
+}
+
 .team .member h4 {
   font-weight: 700;
   margin-bottom: 10px;
@@ -1608,13 +1657,14 @@ section,
   bottom: 15px;
 }
 
-.team .member .social a {
-  transition: color 0.3s;
-  color: color-mix(in srgb, var(--default-color), transparent 70%);
+.team .member .social button {
+  color: var(--accent-color);
 }
 
-.team .member .social a:hover {
-  color: var(--accent-color);
+.team .member .social button:hover {
+  transition: color 0.3s;
+  color: color-mix(in srgb, var(--accent-color), transparent 50%);
+  
 }
 
 .team .member .social i {
@@ -1622,6 +1672,45 @@ section,
   margin: 0 2px;
 }
 
+
+  /* 다이얼로그 스타일 */
+  .team .member .social dialog {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    max-width: 400px;
+    width: 100%;
+}
+
+.team .member .social dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* 닫기 버튼 스타일 */
+.team .member .social .btn-close {
+  position: absolute; /* 부모 요소를 기준으로 위치 */
+  top: 10px; /* 아래에서 10px 떨어짐 */
+  right: 10px; /* 오른쪽에서 10px 떨어짐 */
+    /* background: none;
+    border: none;
+    font-size: 35px;
+    cursor: pointer;
+    color: #333; */
+}
+
+/* 닫기 버튼 스타일 */
+.team .member .social .btn-lg {
+  position: absolute; /* 부모 요소를 기준으로 위치 */
+  bottom: 10px; /* 아래에서 10px 떨어짐 */
+  right: 10px; /* 오른쪽에서 10px 떨어짐 */
+    /* background: none;
+    border: none;
+    font-size: 35px;
+    cursor: pointer;
+    color: #333; */
+}
 /*--------------------------------------------------------------
 # Contact Section
 --------------------------------------------------------------*/
