@@ -1,5 +1,5 @@
 {
-  "name": "dewi-1.0.0",
+  "name": "account-home",
   "version": "1.0.0",
   "description": "Thanks for downloading this template!",
   "main": "index.js",
@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "account-home": "file:",
     "dewi-1.0.0": "file:",
     "express": "^4.21.2"
   },
