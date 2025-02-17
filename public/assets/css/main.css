@@ -1967,17 +1967,17 @@ section,
   transition: 0.3s;
 }
 
-.price-details .services-list a.active {
+.price-details .price-list a.active {
   color: var(--heading-color);
   font-weight: 700;
   border-color: var(--accent-color);
 }
 
-.price-details .services-list a:hover {
+.price-details .price-list a:hover {
   border-color: var(--accent-color);
 }
 
-.price-details .services-list span {
+.price-details .price-list span {
   display: block;
   line-height: 1;
   padding: 8px 0 8px 15px;
@@ -1985,9 +1985,10 @@ section,
   margin: 20px 0;
   color: color-mix(in srgb, var(--default-color), transparent 20%);
   transition: 0.3s;
+  cursor: pointer;
 }
 
-.price-details .services-list span.active {
+.price-details .price-list span.active {
   color: var(--heading-color);
   font-weight: 700;
   border-color: var(--accent-color);
