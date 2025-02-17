@@ -9,7 +9,7 @@
 
   <!-- Favicons -->
   <link href="public/assets/img/favicon.png" rel="icon">
-  <link href="public/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="public/assets/img/favicon.png" rel="apple-touch-icon">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -29,7 +29,7 @@
 </head>
 
 <body class="index-page">
-
+  
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center">
 
@@ -41,32 +41,28 @@
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="#hero" class="active">홈</a></li>
-          <li><a href="#about">혜봄소개</a></li>
-          <li><a href="#services">주요업무</a></li>
-          <li><a href="#team">세무사소개</a></li>
-          <li><a href="#price">수수료안내</a></li>
-          <li><a href="#testimonials">수임후기</a></li>
-          <li><a href="#blog">블로그</a></li>
-          <!-- <li><a href="#contact">문의/신청</a></li> -->
-          <!-- <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+          <li><a href="index.html#hero" class="active">홈</a></li>
+          <li><a href="index.html#about">혜봄소개</a></li>
+          <!-- <li><a href="#services">주요업무</a></li> -->
+          <li class="dropdown"><a href="index.html#services"><span>주요업무</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
-              <li><a href="#">Dropdown 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                <ul>
-                  <li><a href="#">Deep Dropdown 1</a></li>
-                  <li><a href="#">Deep Dropdown 2</a></li>
-                  <li><a href="#">Deep Dropdown 3</a></li>
-                  <li><a href="#">Deep Dropdown 4</a></li>
-                  <li><a href="#">Deep Dropdown 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Dropdown 2</a></li>
-              <li><a href="#">Dropdown 3</a></li>
-              <li><a href="#">Dropdown 4</a></li>
+              <li><a href="service-details.html">사업자 재무상담</a></li>
+              <li><a href="service-details.html#service-details-2">재산 & 세무조사</a></li>
             </ul>
-          </li> -->
-          <li><a href="#contact">오시는길</a></li>
+          </li>
+          <li><a href="index.html#team">세무사소개</a></li>
+          <!-- <li><a href="#price">수수료안내</a></li> -->
+          <li class="dropdown"><a href="index.html#price"><span>수수료안내</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="price-details.html#price-1">사업자 세무회계</a></li>
+              <li><a href="price-details.html#price-2">재산제세</a></li>
+            </ul>
+          </li>
+          <li><a href="index.html#testimonials">수임후기</a></li>
+          <li><a href="index.html#blog">블로그</a></li>
+          <!-- <li><a href="#contact">문의/신청</a></li> -->
+          
+          <li><a href="index.html#contact">오시는길</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
@@ -201,37 +197,41 @@
         <div class="row gy-5">
 
           <div class="col-xl-6 col-md-6" data-aos="zoom-in" data-aos-delay="200">
-            <div class="service-item">
-              <div class="img">
-                <img src="public/assets/img/services-1.jpg" class="img-fluid" alt="">
-              </div>
-              <div class="details position-relative">
-                <div class="icon">
-                  <i class="bi bi-activity"></i>
+            <a href="service-details.html#service-details-1">
+              <div class="service-item">
+                <div class="img">
+                  <img src="public/assets/img/services-1.jpg" class="img-fluid" alt="">
                 </div>
-                <span href="" class="stretched-link">
-                  <h3>사업자 재무상담담</h3>
-                </span>
-                <p>사업 구조에 맞춘 최적의 세무 전략을 제시하고, 법적 리스크를 최소화하며, 효율적인 재무 관리를 돕습니다.</p>
+                <div class="details position-relative">
+                  <div class="icon">
+                    <i class="bi bi-activity"></i>
+                  </div>
+                  <span class="stretched-link">
+                    <h3>사업자 재무상담</h3>
+                  </span>
+                  <p>사업 구조에 맞춘 최적의 세무 전략을 제시하고, 법적 리스크를 최소화하며, 효율적인 재무 관리를 돕습니다.</p>
+                </div>
               </div>
-            </div>
+            </a>
           </div><!-- End Service Item -->
 
           <div class="col-xl-6 col-md-6" data-aos="zoom-in" data-aos-delay="300">
-            <div class="service-item">
-              <div class="img">
-                <img src="public/assets/img/services-2.jpg" class="img-fluid" alt="">
-              </div>
-              <div class="details position-relative">
-                <div class="icon">
-                  <i class="bi bi-broadcast"></i>
+            <a href="service-details.html#service-details-2">
+              <div class="service-item">
+                <div class="img">
+                  <img src="public/assets/img/services-2.jpg" class="img-fluid" alt="">
                 </div>
-                <span href="" class="stretched-link">
-                  <h3>재산, 세무조사</h3>
-                </span>
-                <p>세무조사 과정에서 발생할 수 있는 불필요한 리스크를 사전 예방하고, 발생한 문제는 신속하게 해결하여 고객님의 재정적 안정성을 보장합니다.</p>
+                <div class="details position-relative">
+                  <div class="icon">
+                    <i class="bi bi-broadcast"></i>
+                  </div>
+                  <span class="stretched-link">
+                    <h3>재산, 세무조사</h3>
+                  </span>
+                  <p>세무조사 과정에서 발생할 수 있는 불필요한 리스크를 사전 예방하고, 발생한 문제는 신속하게 해결하여 고객님의 재정적 안정성을 보장합니다.</p>
+                </div>
               </div>
-            </div>
+            </a>
           </div><!-- End Service Item -->
 
           <!-- <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="400">
@@ -519,8 +519,72 @@
 
     <!-- ----------------------------------- Service 2 Section end --------------------------------------------- -->
 
+
+    <section id="testimonials" class="portfolio section light-background">
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Testimonials</h2>
+        <p>수임후기</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+
+          <!-- <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
+            <li data-filter="*" class="filter-active">All</li>
+            <li data-filter=".filter-app">사업자 상담</li>
+            <li data-filter=".filter-product">재산조사</li>
+          </ul> -->
+          <!-- End Portfolio Filters -->
+
+          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+
+            <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-app">
+              <div class="portfolio-content h-100 w-100">
+                <img src="public/assets/img/feedback/feedback-1.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <a href="public/assets/img/feedback/feedback-1.jpg" title="Branding 3" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-app">
+              <div class="portfolio-content h-100 w-100">
+                <img src="public/assets/img/feedback/feedback-2.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <a href="public/assets/img/feedback/feedback-2.jpg" title="Branding 3" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+          <!-- </div>
+          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200"> -->
+            <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-app">
+              <div class="portfolio-content h-100 w-100">
+                <img src="public/assets/img/feedback/feedback-3.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <a href="public/assets/img/feedback/feedback-3.jpg" title="Branding 3" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-app">
+              <div class="portfolio-content h-100 w-100">
+                <img src="public/assets/img/feedback/feedback-4.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <a href="public/assets/img/feedback/feedback-4.jpg" title="Branding 3" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+          </div><!-- End Portfolio Container -->
+
+        </div>
+
+      </div>
+    </section>
+
     <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials section dark-background">
+    <section id="feedback" class="testimonials section dark-background">
 
       <img src="public/assets/img/testimonials-bg.jpg" class="testimonials-bg" alt="">
 
@@ -631,8 +695,11 @@
 
       </div>
 
-    </section><!-- /Testimonials Section -->
-<!-- ----------------------------------- Portfolio section start ----------------------------------- -->
+      
+    </section>
+    <!-- /Testimonials Section -->
+
+    <!-- ----------------------------------- Portfolio section start ----------------------------------- -->
     <!-- Portfolio Section -->
     <section id="blog" class="portfolio section">
 
@@ -769,7 +836,7 @@
       </div>
 
     </section><!-- /Portfolio Section -->
-<!-- ----------------------------------- Portfolio section end ----------------------------------- -->
+    <!-- ----------------------------------- Portfolio section end ----------------------------------- -->
     <!-- Contact Section -->
     <section id="contact" class="contact section">
 
@@ -782,7 +849,7 @@
       <div class="container" data-aos="fade-up" data-aos-delay="100">
 
         <div class="row gy-4">
-          <div class="col-lg-12 ">
+          <div class="col-lg-6">
             <div class="row gy-4">
 
               <div class="col-lg-12">
@@ -812,7 +879,7 @@
             </div>
           </div>
 
-          <!-- <div class="col-lg-6">
+          <div class="col-lg-6">
             <form action="" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="500">
               <div class="row gy-4">
 
@@ -842,7 +909,7 @@
 
               </div>
             </form>
-          </div> -->
+          </div>
           <!-- End Contact Form -->
 
         </div>
@@ -880,18 +947,18 @@
             <h4>Useful Links</h4>
             <div class="col-lg-6 col-md-6">
               <ul>
-                <li><i class="bi bi-chevron-right"></i> <a href="#">홈</a></li>
-                <li><i class="bi bi-chevron-right"></i> <a href="#about">혜봄소개</a></li>
-                <li><i class="bi bi-chevron-right"></i> <a href="#service">주요업무</a></li>
-                <li><i class="bi bi-chevron-right"></i> <a href="#team">세무사소개</a></li>
-                <li><i class="bi bi-chevron-right"></i> <a href="#price">수수료안내</a></li>
+                <li><i class="bi bi-chevron-right"></i> <a href="index.html">홈</a></li>
+                <li><i class="bi bi-chevron-right"></i> <a href="index.html#about">혜봄소개</a></li>
+                <li><i class="bi bi-chevron-right"></i> <a href="index.html#service">주요업무</a></li>
+                <li><i class="bi bi-chevron-right"></i> <a href="index.html#team">세무사소개</a></li>
+                <li><i class="bi bi-chevron-right"></i> <a href="index.html#price">수수료안내</a></li>
               </ul>    
             </div>
             <div class="col-lg-6 col-md-6">
               <ul>
-                <li><i class="bi bi-chevron-right"></i> <a href="#testimonials">수임후기</a></li>
-                <li><i class="bi bi-chevron-right"></i> <a href="#blog">블로그</a></li>
-                <li><i class="bi bi-chevron-right"></i> <a href="#contact">오시는길</a></li>
+                <li><i class="bi bi-chevron-right"></i> <a href="index.html#testimonials">수임후기</a></li>
+                <li><i class="bi bi-chevron-right"></i> <a href="index.html#blog">블로그</a></li>
+                <li><i class="bi bi-chevron-right"></i> <a href="index.html#contact">오시는길</a></li>
               </ul>    
             </div>
           </div>          
@@ -924,11 +991,6 @@
     <div class="container copyright text-center mt-4">
       <p>© <span>Copyright</span> <strong class="px-1 sitename">혜봄세무회계</strong> <span>All Rights Reserved</span></p>
       <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you've purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-        <!-- Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> Distributed by <a href=“https://themewagon.com>ThemeWagon -->
       </div>
     </div>
 
@@ -981,10 +1043,6 @@ function showCarrier(carrier) {
     })
   }
 
-
-  
-  
-  
   </script>
 
 </body>
