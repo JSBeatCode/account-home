@@ -1037,6 +1037,10 @@
     ]
   }
   /**** modal start *****/
+  function preventScroll(event) {
+    event.preventDefault();
+  }
+
   function onClickShowModal (index) {
     state.modalHeader.innerText = '';
     state.modalBody.innerText = '';
@@ -1059,13 +1063,18 @@
         state.modalHeader.innerText = one.title
         state.modalBody.innerText = one.carrier
       }
-    })
-    
+    }) 
+
+    const modalDiv = document.querySelector(".modal");
+    // modalDiv.addEventListener("wheel", preventScroll, { passive: false });
+    document.body.style.overflow = "hidden";
   }
 
   function onClickCloseModal () {
     state.modal.classList.remove('open');
     state.overlay.classList.remove('open');
+    // modalDiv.removeEventListener("wheel", preventScroll);
+    document.body.style.overflow = "";
   }
 
   // 오버레이 클릭 시 모달 닫기
