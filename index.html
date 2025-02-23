@@ -561,7 +561,7 @@
         <div class="swiper init-swiper">
           <div class="swiper-wrapper">
             
-            <div class="swiper-slide">
+            <div class="swiper-slide" style="border: 1px solid blue;">
               <div class="testimonial-item">
                 <img src="public/assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
                 <h3>이영철</h3>
@@ -627,11 +627,11 @@
 
           </div>
           <div class="pagination">
-            <div class="bullet active" data-index="0"></div>
-            <div class="bullet" data-index="1"></div>
-            <div class="bullet" data-index="2"></div> 
-            <div class="bullet" data-index="3"></div> 
-        </div>
+            <div class="bullet active" data-index="0" ></div>
+            <div class="bullet" data-index="1" ></div>
+            <div class="bullet" data-index="2" ></div> 
+            <div class="bullet" data-index="3" ></div> 
+          </div>
           <!-- <div class="swiper-pagination"></div> -->
         </div>
 
@@ -780,14 +780,14 @@
     </section><!-- /Portfolio Section -->
     <!-- ----------------------------------- Portfolio section end ----------------------------------- -->
     <!-- Contact Section -->
-    <section id="contact" class="contact section">
-
+    <section id="contact-actual" class="contact section">
+      <div id="contact"></div>
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Contact</h2>
         <p>오시는길</p>
       </div><!-- End Section Title -->
-
+      
       <div class="container" data-aos="fade-up" data-aos-delay="100">
 
         <div class="row gy-4">
@@ -860,11 +860,11 @@
 
     </section><!-- /Contact Section -->
 
+    <!-- <br/>
     <br/>
     <br/>
     <br/>
-    <br/>
-    <br/>
+    <br/> -->
 
   </main>
 
@@ -1075,16 +1075,21 @@
   /**** modal end *****/
 
   /**** carousel start ****/
+  
   setInterval(() => {
     moveCarousel();  
-  }, 3000)
-
+  }, 5000)
+  
+  console.log('jsdno0 debug1-2 state.bullets', state.bullets);
+ 
   state.bullets.forEach(bullet => {
     bullet.addEventListener('click', (e) => {
+      console.log('jsdno0 debug1-1 click bullet');
       state.index = parseInt(e.target.getAttribute('data-index'))
       updateCarousel()
     })
   });
+  
 
   function moveCarousel () {
     state.index = (state.index === state.slides.length - 1) ? 0 : state.index + 1;
