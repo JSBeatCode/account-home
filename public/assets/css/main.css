@@ -1453,6 +1453,7 @@ section,
 
 .testimonials .swiper-wrapper {
   height: auto;
+  transition: transform 0.5s ease-in-out;
 }
 
 .testimonials .swiper-pagination {
@@ -1470,6 +1471,28 @@ section,
 .testimonials .swiper-pagination .swiper-pagination-bullet-active {
   background-color: var(--default-color);
   opacity: 1;
+}
+
+.testimonials .bullet {
+  width: 10px;
+  height: 10px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.testimonials .bullet.active {
+  background-color: white;
+}
+
+/* Pagination bullets */
+.testimonials .pagination {
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
 }
 
 @media (min-width: 992px) {
@@ -1666,15 +1689,15 @@ section,
 }
 
 
-  /* 다이얼로그 스타일 */
-  .team .member .social dialog {
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    background-color: #fff;
-    max-width: 400px;
-    width: 100%;
+/* 다이얼로그 스타일 */
+.team .member .social dialog {
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  max-width: 400px;
+  width: 100%;
 }
 
 .team .member .social dialog::backdrop {
@@ -1704,6 +1727,7 @@ section,
     cursor: pointer;
     color: #333; */
 }
+
 /*--------------------------------------------------------------
 # Contact Section
 --------------------------------------------------------------*/
@@ -2033,18 +2057,7 @@ section,
   margin-right: 8px;
   color: var(--accent-color);
 }
-/*
-.fade-in {
-  opacity: 0;
-  animation: fadeIn 1s forwards;
-}
 
-@keyframes fadeIn {
-  to {
-      opacity: 1;
-  }
-}
-*/
 .hiddenDisplay {
   display: none;
 }
@@ -2060,6 +2073,63 @@ section,
   transform: translateY(0);
 }
 
-/* .price-details #service-1 {
-  transition: all 0.5s;
-} */
+/*** modal start ***/
+.modal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  max-height: 400px;
+  /* padding: 20px; */
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  z-index: 1000;
+}
+  
+.modal.open {
+  display: block;
+}
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+.overlay.open {
+  display: block;
+}
+.modal-header {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+.modal-footer {
+  text-align: right;
+}
+.modal-footer button {
+  margin-left: 10px;
+}
+/* 닫기 버튼 스타일 (모달 내부에서 고정) */
+.close-btn {
+  /* position: fixed; */
+  /* top: 10px; */
+  /* right: 10px; */
+  background: red;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* 닫기 버튼 호버 효과 */
+.close-btn:hover {
+  background: darkred;
+}

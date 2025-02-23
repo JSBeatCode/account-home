@@ -124,7 +124,7 @@
     });
   }
 
-  window.addEventListener("load", initSwiper);
+  // window.addEventListener("load", initSwiper);
 
   /**
    * Init isotope layout and filters
