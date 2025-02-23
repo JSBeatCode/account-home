@@ -1002,6 +1002,7 @@
     slides: document.querySelectorAll('.swiper-slide'),
     bullets: document.querySelectorAll('.bullet'),
     index: 0,
+    intervalVal: null,
     teamData: [
       {
         id: 1,
@@ -1075,18 +1076,23 @@
   /**** modal end *****/
 
   /**** carousel start ****/
+  function startMoveCarousel() {
+    state.intervalVal = setInterval(() => {
+      moveCarousel();  
+    }, 5000)
+  }
+  startMoveCarousel();
   
-  setInterval(() => {
-    moveCarousel();  
-  }, 5000)
   
   console.log('jsdno0 debug1-2 state.bullets', state.bullets);
  
   state.bullets.forEach(bullet => {
     bullet.addEventListener('click', (e) => {
+      clearInterval(state.intervalVal);
       console.log('jsdno0 debug1-1 click bullet');
       state.index = parseInt(e.target.getAttribute('data-index'))
       updateCarousel()
+      startMoveCarousel();
     })
   });
   
